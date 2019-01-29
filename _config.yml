@@ -1,14 +1,14 @@
-title:             Clean Blog
-email:             your-email@example.com
+title:             A new start Blog
+email:             musong3@gmail.com
 description:       A Blog Theme by Start Bootstrap
-author:            Start Bootstrap
+author:            shins94
 baseurl:           ""
 url:               "https://shins94.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
-github_username:   BlackrockDigital
-facebook_username: StartBootstrap
+twitter_username:  musong3
+github_username:   shins94
+# facebook_username: StartBootstrap
 
 # Build settings
 markdown:          kramdown
