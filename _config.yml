@@ -9,7 +9,7 @@ url:               "https://shins94.github.io"
 twitter_username:  musong3
 github_username:   shins94
 # facebook_username: StartBootstrap
-
+disqus_shortname: shins94
 # Build settings
 markdown:          kramdown
 paginate:          5
