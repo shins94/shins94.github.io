@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Counting triplet'
-subtitle: shins94 블로그 개설
+subtitle: Hackerrank 문제 풀이
 date: '2019-01-29 14:12:00 -0400'
 background: /img/posts/02.jpg
 published: true
@@ -97,7 +97,7 @@ right map에서 현재 숫자 1개를  줄여서 현재숫자 1개의 사용함�
 
 잘 생각이 안나서 hackerrank 답 참조함...
 
-```c++
+```
 
 #include <bits/stdc++.h>
 
