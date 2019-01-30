@@ -11,6 +11,7 @@ github_username:   shins94
 # facebook_username: StartBootstrap
 disqus_site_id: shins94
 # Build settings
+highlightjs_theme: "monokai_sublime"
 markdown:          kramdown
 paginate:          5
 paginate_path:     "/posts/page:num/"
