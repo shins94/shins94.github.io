@@ -97,7 +97,7 @@ right map에서 현재 숫자 1개를  줄여서 현재숫자 1개의 사용함�
 
 잘 생각이 안나서 hackerrank 답 참조함...
 
-```
+{% highlight c++ %}
 
 #include <bits/stdc++.h>
 
@@ -208,7 +208,7 @@ vector<string> split(const string &str) {
     tokens.push_back(str.substr(start));
     return tokens;
 }
-```
+{% endhighlight %}
 
 
 
