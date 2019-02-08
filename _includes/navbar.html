@@ -23,17 +23,13 @@
         
         <li class="nav-item">
              <a class="nav-link" href="{{"/category" | relative_url }}">category</a>
-            <nav class="content-ul">
-            {% for category in site.categories %}
-             <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"
-           class="sidebar-nav-item pl-3rem">
-                            <span class="name">
-                                {{ category | first }}
-                            </span>
-        <span class="badge">{{ category | last | size }}</span>
-      </a>
-      {% endfor %}
-      </nav>
+           <ul>
+						  <li><a href="/DE/Github Blog">Github Blog</a></li>
+						  <li><a href="/DE/Git">Git</a></li>
+						  <li><a href="/DE/Docker">Docker</a></li>
+						  <li><a href="/DE/Ubuntu">Ubuntu</a></li>
+						  <li><a href="/DE/Java">Java</a></li>
+					</ul>
         </li>
         
       </ul>
