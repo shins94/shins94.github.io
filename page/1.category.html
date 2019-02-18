@@ -19,7 +19,7 @@ background: '/img/bg-post.jpg'
     
     
 {% capture categories %}
-{% for category in post.categories %}
+{% for category in page.categories %}
 <a href="{{ root_url }}/{{ site.category_dir }}#{{ category }}" title="Category: {{ category }}" rel="category"></a>{% unless forloop.last %}&nbsp;{% endunless %}
 {% endfor %}
 {% endcapture %}
