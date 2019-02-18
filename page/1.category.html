@@ -8,17 +8,36 @@ background: '/img/bg-post.jpg'
 {% assign esc_date="{{ p.date }}" %}
 {% assign esc_ctgname="{{ hash }}" %}
 
+
+
+
 <div id="post-list">
   <h1>{{page.title}}</h1>
   <hr>
   <h2 id="{{ category | first }}">{{ esc_ctgname }}</h2>
   <ul>
-    <li v-for="p in posts" v-if="p.categories.indexOf(hash) != -1">
+    
+    
+{% capture categories %}
+{% for category in post.categories %}
+<a href="{{ root_url }}/{{ site.category_dir }}#{{ category }}" title="Category: {{ category }}" rel="category"></a>{% unless forloop.last %}&nbsp;{% endunless %}
+{% endfor %}
+{% endcapture %}
+{% capture category_size %}{{ categories | strip_newlines | replace: ' ', '' | size }}{% endcapture %}
+{% unless category_size == '0' %}
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>{{ categories }}
+  <!-- <span class="point">•</span> -->
+</span>
+{% endunless %}
+
+<!--     <li v-for="p in posts" v-if="p.categories.indexOf(hash) != -1">
       <time>
         {{ esc_date }}
       </time>
       <a v-bind:href="p.url">{{ esc_title }}</a>
-    </li>
+    </li> -->
   </ul>
 </div>
 
