@@ -17,7 +17,7 @@ background: '/img/bg-post.jpg'
   <h2 id="{{ category | first }}">{{ esc_ctgname }}</h2>
   <ul>
     
-    
+    <h1> Test </h1>
 {% capture categories %}
 {% for category in page.categories %}
 <a href="{{ root_url }}/{{ site.category_dir }}#{{ category }}" title="Category: {{ category }}" rel="category"></a>{% unless forloop.last %}&nbsp;{% endunless %}
