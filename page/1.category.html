@@ -1,36 +1,24 @@
 ---
 layout: page
 title: Categories
-permalink: /categories/
+permalink: /category/
 background: '/img/bg-post.jpg'
 ---
 {% assign esc_title="{{ p.title }}" %}
 {% assign esc_date="{{ p.date }}" %}
 {% assign esc_ctgname="{{ hash }}" %}
 
-
-
-
 <div id="post-list">
   <h1>{{page.title}}</h1>
   <hr>
   <h2 id="{{ category | first }}">{{ esc_ctgname }}</h2>
   <ul>
-  {% for category in site.categories %}
-      <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"
-         class="sidebar-nav-item pl-3rem">
-                            <span class="name">
-                                {{ category | first }}
-                            </span>
-        <span class="badge">{{ category | last | size }}</span>
-      </a>
-      {% endfor %}
-<!--     <li v-for="p in posts" v-if="p.categories.indexOf(hash) != -1">
+    <li v-for="p in posts" v-if="p.categories.indexOf(hash) != -1">
       <time>
         {{ esc_date }}
       </time>
       <a v-bind:href="p.url">{{ esc_title }}</a>
-    </li> -->
+    </li>
   </ul>
 </div>
 
