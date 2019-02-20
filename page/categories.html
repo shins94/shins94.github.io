@@ -20,10 +20,10 @@ background: '/img/bg-post.jpg'
       <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"
          class="sidebar-nav-item pl-3rem">
                             
-        <span> <h2 id="{{ category | first }}">{{ category | first }}</h2> </span>
-<!--                             <span class="name">
+<!--         <span> <h2 id="{{ category | first }}">{{ category | first }}</h2> </span> -->
+                            <span class="name">
                                 {{ category | first }}
-                            </span> -->
+                            </span>
         <span class="badge">{{ category | last | size }}</span>
       </a>
       {% endfor %}
