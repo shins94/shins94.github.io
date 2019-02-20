@@ -20,10 +20,8 @@ background: '/img/bg-post.jpg'
   <li>
     <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}">                           
 <!--         <span> <h2 id="{{ category | first }}">{{ category | first }}</h2> </span> -->
-                            <h2 class="post-title">
-                                {{ category | first }}
-                            </h2>
-        <span class="badge">{{ category | last | size }}</span>
+      <span class="post-title">{{ category | first }}</h2></span>
+      <span class="badge">{{ category | last | size }}</span>
       </a>
     </li>
       {% endfor %}
