@@ -4,6 +4,7 @@ title: 'Counting triplet'
 subtitle: Hackerrank 문제 풀이
 date: '2019-01-29 14:12:00 -0400'
 background: /img/posts/02.jpg
+categories: algorithm
 published: true
 ---
 You are given an array and you need to find number of tripets of indices  such that the elements at those indices are in [geometric progression](https://en.wikipedia.org/wiki/Geometric_progression) for a given common ratio  and . 
