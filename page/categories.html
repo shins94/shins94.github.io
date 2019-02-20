@@ -17,13 +17,15 @@ background: '/img/bg-post.jpg'
   <h2 id="{{ category | first }}">{{ esc_ctgname }}</h2>
   <ul>
   {% for category in site.categories %}
-      <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}">                           
+  <li>
+    <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}">                           
 <!--         <span> <h2 id="{{ category | first }}">{{ category | first }}</h2> </span> -->
-                            <span class="post-title">
+                            <h2 class="post-title">
                                 {{ category | first }}
-                            </span>
+                            </h2>
         <span class="badge">{{ category | last | size }}</span>
       </a>
+    <lin
       {% endfor %}
 <!--     <li v-for="p in posts" v-if="p.categories.indexOf(hash) != -1">
       <time>
