@@ -4,7 +4,7 @@ title: '새로운 시작'
 subtitle: shins94 블로그 개설
 date: '2019-01-29 14:12:00 -0400'
 background: /img/posts/06.jpg
-categories: jekyll
+categories: etc
 published: true
 ---
 ## 블로그를 시작하며
