@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 description: This is who I am.
-background: '/img/posts/IMG_7908.JPG'
+background: '/img/IMG_8945.JPG'
 ---
 
 <img class="img" src="/img/avatar.png" alt="Demo Image">
