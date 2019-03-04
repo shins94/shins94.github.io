@@ -18,7 +18,7 @@ So the question was you have two kinds of applications foreground and background
 input :  foreground { {1,2},{2,4},{3,1},{4,5}}
             background { {1,1},{2,3},{3,2} }
             K =5
-output : {{1,2},{2,1}}
+output : { {1,2} , {2,1} }
 
 input :  foreground { {1,2},{2,4}}
             background { {1,1} }
