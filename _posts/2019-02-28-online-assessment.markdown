@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: 'Find pair that sum is equal or closest to given K from two arrays.'
+title: 'Pair that sum equal or closest to given K from two arrays.'
 subtitle: shins94 블로그 개설
 date: '2019-03-04 10:44:00 -0400'
 background: /img/posts/IMG_7947.JPG
