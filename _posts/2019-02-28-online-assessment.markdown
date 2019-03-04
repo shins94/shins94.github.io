@@ -10,20 +10,20 @@ published: true
 
 Amazon online assessment problem
 
-```
+
 So the question was you have two kinds of applications foreground and background. In the array list given for both type of applications 0 element is id of the application and 1st element is the memory used by the application and K is the system memory capacity. We need to find which foreground and background applications for which the total would be either equal to K or closest to K. So for example 1 foreground ({1,2}) background {2,3} and foreground {2,4} background{1,1} would be out put as sum of the memory would be 5. For second example there is no foreground or background application for which K = 4. So the closest total would be 3 so the out put would id's of the 1st application i.e. {1,1}.
-```
+
 
 ```
 input :  foreground { {1,2},{2,4},{3,1},{4,5}}
-            background {{1,1},{2,3},{3,2}}
+            background { {1,1},{2,3},{3,2} }
             K =5
 output : {{1,2},{2,1}}
 
 input :  foreground { {1,2},{2,4}}
-            background {{1,1}}
+            background { {1,1} }
             K =4
-output : {{1,1}}
+output : { {1,1} }
 ```
 
 포그라운드, 백그라운드 앱의 아이디와 메모리가 Array로 주어지고. 주어진 K과 같거나 아니면 K보다 작은 값중에 제일 큰 값을 가지는
