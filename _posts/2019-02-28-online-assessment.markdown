@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: 'Pair that sum equal or closest to given K from two arrays.'
