@@ -11,7 +11,7 @@ published: true
 Amazon online assessment problem
 
 
-So the question was you have two kinds of applications foreground and background. In the array list given for both type of applications 0 element is id of the application and 1st element is the memory used by the application and K is the system memory capacity. We need to find which foreground and background applications for which the total would be either equal to K or closest to K. So for example 1 foreground ({1,2}) background {2,3} and foreground {2,4} background{1,1} would be out put as sum of the memory would be 5. For second example there is no foreground or background application for which K = 4. So the closest total would be 3 so the out put would id's of the 1st application i.e. {1,1}.
+So the question was you have two kinds of applications foreground and background. In the array list given for both type of applications 0 element is id of the application and 1st element is the memory used by the application and K is the system memory capacity. We need to find which foreground and background applications for which the total would be either equal to K or closest to K. So for example 1 foreground ({1,2}) background {2,3} and foreground {2,4} background {1,1} would be out put as sum of the memory would be 5. For second example there is no foreground or background application for which K = 4. So the closest total would be 3 so the out put would id's of the 1st application i.e. {1,1}.
 
 
 ```
@@ -72,6 +72,3 @@ public List<List> closestPq(List<List> backgrounds, List<List> foregrounds, int 
         return result;
     }
 ```
-
-
-
