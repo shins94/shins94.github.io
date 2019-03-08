@@ -536,7 +536,7 @@ pre {
 }
 
 pre code {
-  font-size: inherit;
+  font-size: .75rem
   color: inherit;
   word-break: normal;
 }
