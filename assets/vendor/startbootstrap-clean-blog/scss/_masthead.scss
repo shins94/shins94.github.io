@@ -62,7 +62,8 @@ header.masthead {
       @include sans-serif-font;
     }
     .meta {
-      font-size: 20px;
+//       font-size: 20px;
+      font-size: 16px;
       font-weight: 300;
       font-style: italic;
       @include serif-font;
