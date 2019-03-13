@@ -76,3 +76,97 @@ public List<List> closestPq(List<List> backgrounds, List<List> foregrounds, int 
         return result;
     }
 ```
+
+```c++
+//
+//  main.cpp
+//  ApplicationMemory
+//
+//  Created by Sung Hyun Shin on 11/03/2019.
+//  Copyright © 2019 Sung Hyun Shin. All rights reserved.
+//
+
+#include <bits/stdc++.h>
+using namespace std;
+
+struct List {
+    int forg_i;
+    int backg_i;
+    int diff;
+};
+
+struct cmp {
+    bool operator()(List a, List b) {
+        return a.diff > b.diff;
+    }
+
+};
+
+
+vector<vector<int>> closest(vector<vector<int>> forgrounds,vector<vector<int>> backgrounds,int K) {
+
+    priority_queue<List,vector<List>,cmp> pq;
+    
+    for(int i = 0; i < forgrounds.size(); i++) {
+        for(int j = 0; j < backgrounds.size(); j++) {
+            
+            int diff = K - forgrounds[i].at(1) - backgrounds[j].at(1);
+            
+            if(diff < 0)
+                continue;
+            
+            List list;
+            list.forg_i  = forgrounds[i].at(0);
+            list.backg_i = backgrounds[j].at(0);
+            list.diff = diff;
+            pq.push(list);
+        }
+    }
+    
+    vector<vector<int>> result;
+    
+    while(!pq.empty()) {
+
+        List list = pq.top();
+        pq.pop();
+        int value = list.diff;
+
+        if (value == 0) {
+            
+            vector <int> item;
+            item.push_back(list.forg_i);
+            item.push_back(list.backg_i);
+            result.push_back(item);
+        } else if(result.size() == 0) {
+            vector <int> item;
+            item.push_back(list.forg_i);
+            item.push_back(list.backg_i);
+            result.push_back(item);
+            break;
+        }
+    }
+    
+    return result;
+}
+
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    vector<vector<int>> forgrounds;
+    vector<vector<int>> backgrounds;
+    
+    forgrounds.push_back({1,2});
+    forgrounds.push_back({2,4});
+    forgrounds.push_back({3,1});
+    forgrounds.push_back({4,5});
+    
+    backgrounds.push_back({1,1});
+    backgrounds.push_back({2,3});
+    backgrounds.push_back({3,2});
+    
+    vector<vector<int>> result = closest(forgrounds,backgrounds,5);
+
+    return 0;
+}
+
+```
