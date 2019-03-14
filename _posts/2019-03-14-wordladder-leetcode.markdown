@@ -64,5 +64,68 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
 <img class="img" src="https://leetcode.com/problems/word-ladder/Figures/127/Word_Ladder_1.png" alt="Demo Image">
 </center>
 
+모든 간선이 양방향이고 가중치는 1로 생각이 가능한 위와 같은 그래프로 바뀌며. 이 그래프를 구성한 다음 BFS로 최단 경로를 구해주면 된다.
 
+```c++
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+
+    map<string,vector<string>> mp;
+    map<string,int> dist;
+    
+    for(int i = 0; i < wordList.size(); i++) {
+        
+        string word = wordList[i];
+        
+        for(int i = 0; i < word.size(); i++ ) {
+        
+            string temp = word;
+            temp[i] = '*';
+
+            mp[temp].push_back(word);
+            
+        }
+        
+        dist[word] = 0;
+    }
+    
+    queue<string> q;
+    q.push(beginWord);
+    dist[beginWord] = 1;
+    
+    while(!q.empty()) {
+    
+        string current = q.front();
+        q.pop();
+        
+        for(int i = 0; i < current.size(); i++ ) {
+            
+            string temp = current;
+            temp[i] = '*';
+
+            for(int j = 0; j < mp[temp].size(); j++) {
+            
+                string next = mp[temp][j];
+                
+                if(dist[next] == 0) {
+                    dist[next] = dist[current] + 1;
+                    q.push(next);
+                }
+            }
+            
+        }
+        
+        
+    }
+    
+    return dist[endWord];
+    
+}
+
+
+```
 
