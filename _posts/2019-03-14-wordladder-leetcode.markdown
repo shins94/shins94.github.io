@@ -54,8 +54,15 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
 결국에는 각 단어를 노드라고 생각하고, 각단어의 동일한 글자 위치에서 1글자를 뺐을때 동일한 단어가 되는 경우에는 
 노드가 1가중치로 연결된다고 생각하면 그래프를 구성할 수 있다.
 
+<center>
+  <img class="img" src="https://leetcode.com/problems/word-ladder/Figures/127/Word_Ladder_2.png" alt="Demo Image">
+</center>
 
+위와 같이 그래프를 구성하면 **Example 1:** 은 아래와 같은 그래프로 바꿔 그릴수 있다.
 
+<center>
+<img class="img" src="https://leetcode.com/problems/word-ladder/Figures/127/Word_Ladder_1.png" alt="Demo Image">
+</center>
 
 
 
