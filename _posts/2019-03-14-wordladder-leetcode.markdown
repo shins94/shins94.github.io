@@ -3,7 +3,7 @@ layout: post
 title: 'Word ladder'
 subtitle: LeetCode problem
 date: '2019-03-14 15:44:00'
-background: /img/posts/IMG_7947.JPG
+background: /img/posts/03.jpg
 categories: algorithm
 published: true
 ---
@@ -65,6 +65,8 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
 </center>
 
 모든 간선이 양방향이고 가중치는 1로 생각이 가능한 위와 같은 그래프로 바뀌며. 이 그래프를 구성한 다음 BFS로 최단 경로를 구해주면 된다.
+Map을 이용하여 각 단어가 1글자씩 "*" 로 변경 됬을 경우를 Map에 저장한다.
+
 
 ```c++
 
@@ -77,6 +79,7 @@ int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
     map<string,vector<string>> mp;
     map<string,int> dist;
     
+    //map으로 각 단어에서 한글자씩 *인 상태로 변경하여 map["h*t"] 이런식으로 채워준다.
     for(int i = 0; i < wordList.size(); i++) {
         
         string word = wordList[i];
@@ -118,8 +121,7 @@ int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
             }
             
         }
-        
-        
+    
     }
     
     return dist[endWord];
