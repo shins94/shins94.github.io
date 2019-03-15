@@ -1,0 +1,76 @@
+
+
+
+
+
+
+```c++
+using namespace std;
+
+struct node {
+    
+    int key;
+    int data;
+    node* prev;
+    node* next;
+    
+    node(int key, int data) {
+        this->key = key;
+        this->data = data;
+    }
+    
+};
+
+
+class LRUCache {
+public:
+    
+    int max_capacity;
+    int current_capacity = 0;
+    
+    map<int,list<node>::iterator> mp;
+    list<node> lt;
+    
+    LRUCache(int capacity) {
+        this->max_capacity = capacity;
+    }
+    
+    int get(int key) {
+        
+        if(mp.count(key) != 0){
+            
+            list<node>::iterator itor = mp[key];
+            int return_val = itor->data;
+            lt.splice(lt.begin(),lt,itor);
+            mp[key] = lt.begin();
+            
+            return return_val;
+            
+        } else {
+            return -1;
+        }
+    }
+    
+    void put(int key, int value) {
+
+        if(mp.count(key) != 0){
+            
+            list<node>::iterator itor = mp[key];
+            itor->data = value;
+            lt.splice(lt.begin(),lt,itor);
+            mp[key] = lt.begin();
+            
+        } else {
+            
+            if(lt.size() >= max_capacity) {
+                mp.erase(lt.back().key);
+                lt.pop_back();
+            }
+            
+            lt.push_front(node(key,value));
+            mp[key] = lt.begin();
+        }
+
+    }
+};
+```
