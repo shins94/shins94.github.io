@@ -1,8 +1,12 @@
-
-
-
-
-
+---
+layout: post
+title: 'LRU Cache'
+subtitle: LeetCode LRU Cache 문제 풀이
+date: '22019-03-15 17:55:00 -0400'
+background: /img/posts/IMG_8904.JPG
+categories: algorithm
+published: true
+---
 
 ```c++
 using namespace std;
