@@ -37,11 +37,14 @@ LRU Cache를 구현하는 문제이다. LRU는 Least Recently Used cache의 약�
 억세스 빈도가 낮은 순서대로 캐시에 영역에서 제거된다. 이를 이용해서 자주 사용되는 데이터가 
 메모리 영역에 유지하여 불필요한 로딩 시간을 단축 할수 있게 된다.
 
+
 구현 방법은 아래 그림과 같이 Doubly-linked list와 Hash map을 활용하여 구현이 가능하다. 
+
 
 <center>
   <img class="img" src="https://cdn-images-1.medium.com/max/1600/0*fOwBd3z0XtHh7WN1.png">
 </center>
+
 
 hash map은 주어지는 key값과 linked list의 data의 포지션을 알수 있는 iterator 값을
 이용하여 구성된다.
@@ -72,16 +75,27 @@ if(lt.size() >= max_capacity) {
 lt.push_front(node(key,value));
 mp[key] = lt.begin();
 ```
-위와 같이 put의 경우에는 put이된 data의 위치를 항상 리스트의 최상단으로 위치 시켜서
-가장 최근 사용된 순으로 리스트에 존재하게 한다. 
+위와 같이 put의 경우에는 put이된 data의 위치를 항상 hash map에 저장하고, 리스트의 
+최상단으로 위치 시켜서 가장 최근 사용된 순으로 리스트에 존재하게 한다. 그리고 현재 캐시의
+내용이 초기에 지정한 용량에 도달 했을 경우에는 가장 사용이 안된 아이템을 삭제하고 새로 
+put하는 내용이 캐시에 저장되게 한다.
 
 
-그 위치를 hash map에 저장하여
+get 함수는 현재 요청한 key값이 hash map에 존재하는지 확인하고, 존재 할 경우
+hash map에서 key값으로 list에 key값을 위치를 얻어온다. 해당 key의 data를
+가져오고, 현재 **key값의 item의 위치를 list의 최상단으로 이동 시킨다.** 그리고 
+그 위치를 hash map에 저장한다.
+
+```c++
+list<node>::iterator itor = mp[key];
+int return_val = itor->data;
+lt.splice(lt.begin(),lt,itor);
+mp[key] = lt.begin();
+```
 
 
 
-
-
+전제 소스는 아래와 같다.
 
 ```c++
 using namespace std;
