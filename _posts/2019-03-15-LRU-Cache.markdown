@@ -34,8 +34,9 @@ cache.get(4);       // returns 4
 
 
 
-<image>https://cdn-images-1.medium.com/max/1600/0*fOwBd3z0XtHh7WN1.png </image>
-
+<center>
+  <img class="img" src="https://cdn-images-1.medium.com/max/1600/0*fOwBd3z0XtHh7WN1.png">
+</center>
 
 
 
