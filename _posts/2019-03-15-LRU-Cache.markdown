@@ -32,6 +32,10 @@ cache.get(3);       // returns 3
 cache.get(4);       // returns 4
 ```
 
+LRU Cache를 구현하는 문제이다. Least Recently Used cache의 약자이다. 제한된 용량의 캐시 영역에서 
+최근에 억세스된(put/get 모두의 경우) data가 캐시 영역에 보존 되며. 억세스 빈도가 낮은 순서대로
+캐시에 영역에서 제거된다. 이를 이용해서 자주 사용되는 데이터가 메모리 영역에 유지하여 불필요한 로딩 시간을
+단축 할수 있게 된다. 실제로 안드로
 
 
 <center>
