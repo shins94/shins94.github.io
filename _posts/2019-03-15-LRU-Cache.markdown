@@ -49,6 +49,11 @@ LRU Cache를 구현하는 문제이다. LRU는 Least Recently Used cache의 약�
 hash map은 주어지는 key값과 linked list의 data의 포지션을 알수 있는 iterator 값을
 이용하여 구성된다.
 
+```c++
+map<int,list<node>::iterator> mp;
+list<node> lt;
+```
+
 캐시에 put, get 할 수 있는 두가지 함수를 제공하여 구현한다.
 
 put 함수는 key값을 이용하여 hash map에 이미 해당 키값을 가진 data가 존재하는 확인 후에
