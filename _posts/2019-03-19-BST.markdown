@@ -51,7 +51,10 @@ We also have exercises for you to find the **inorder successor** in a BST after 
 
 Leetcode 강의 에서는 세가지 문제가 나왔다. **Validate a BST, inorder traversal, inorder successor** 각각의 문제를 풀어 보겠다.
 
+
 **Validate Binary Search Tree**
+
+------
 
 Given a binary tree, determine if it is a valid binary search tree (BST).
 
@@ -84,7 +87,7 @@ Explanation: The input is: [5,1,4,null,null,3,6]. The root node's value
              is 5 but its right child's value is 4.
 ```
 
-------
+
  
 주어진 이진 트리가   
  
