@@ -49,7 +49,7 @@ We also have exercises for you to find the **inorder successor** in a BST after 
 </center>
 
 
-Leetcode 강의 에서는 세가지 문제가 나왔다. **Validate a BST, inorder traversal, inorder successor 각각의 문제를 풀어 보겠다.
+Leetcode 강의 에서는 세가지 문제가 나왔다. **Validate a BST, inorder traversal, inorder successor** 각각의 문제를 풀어 보겠다.
 
  
  
