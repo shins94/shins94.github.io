@@ -31,3 +31,25 @@ We have exercises for you to **validate a BST** after this article. You can use 
 Like a normal binary tree, we can traverse a BST in preorder, inorder, postorder or level-order. However, it is noteworthy that **inorder traversal** in BST will be in **ascending order**. Therefore, the inorder traversal is the most frequent used traversal method of a BST.
 
 We also have exercises for you to find the **inorder successor** in a BST after this article. Obviously, you can do the inorder traversal to find the inorder successor in a BST. But please try to apply the property of the BST we have learned to find out a better way to solve this problem.
+ 
+**출처 : leetcode BST 문제**
+
+
+이진 탐색 트리 (binary search tree) 는 이진 트리의 특별한 형태로 아래 조건과 같은 이진 검색 성질을 가진 트리이다.
+
+1. 각 노드의 값은 왼쪽에 저장된 모든 서브 트리 노드의 값보다 커야 한다.
+2. 각 노드의 값은 오른쪽에 저장된 모든 서브 트리 노드의 값보다 커야 한다.
+
+
+
+아래 그림은 이진 탐색 트리 (BST)의 예 이다
+
+<center>
+<img src = "https://leetcode.com/explore/learn/card/introduction-to-data-structure-binary-search-tree/140/introduction-to-a-bst/Figures/binary_search_tree/BST_example.png">
+</center>
+
+
+Leetcode 강의 에서는 세가지 문제가 나왔다. **Validate a BST, inorder traversal, inorder successor 각각의 문제를 풀어 보겠다.
+
+ 
+ 
