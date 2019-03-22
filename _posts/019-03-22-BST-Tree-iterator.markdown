@@ -40,3 +40,7 @@ iterator.hasNext(); // return false
 - `next()` and `hasNext()` should run in average O(1) time and uses O(*h*) memory, where *h* is the height of the tree.
 - You may assume that `next()` call will always be valid, that is, there will be at least a next smallest number in the BST when `next()` is called.
 
+이 문제는 주어진 BST에서 next함수가 호출 될때마다 BST내에서 제일 작은 값부터 순차적으로 값을 리턴하는 함수를 구현하고,
+hasNext를 호출했을 경우에는 다음 최소값이 있는지 없는지를 리턴하면 된다.
+
+
