@@ -90,10 +90,15 @@ public:
             current = current->left;
         }
         
-        //위 루프를 통해서 
+        //현재 스택에 최상단의 값을 꺼낸다.
         TreeNode *temp = st.top();
         st.pop();
         
+        //그 노드의 right 노드를 current에 넣고 현재값을 리턴함.
+        //right노드가 null이면 위의 while루프를 skip하게 됨으로
+        //다음 next 함수에서는 현재 temp노드의 상위 노드가 처리된다.
+        //right 노드가 null이 아닌 경우에는 위의 while loop를 통해
+        //다음 next 함수에서는 right 노드의 left노드가 처리 되게 된다. 
         current = temp->right;
         return temp->val;
         
