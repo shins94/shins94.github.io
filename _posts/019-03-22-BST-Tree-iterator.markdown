@@ -66,6 +66,7 @@ left노드 쪽으로 이동한다. 이것을 계속 반복하다가 current 노�
 current에 저장한다. 그리고 temp->val을 return 하게 되면 next 함수는 항상
 출력되지 않은 BST내의 최소값을 return 하게 된다.
 
+결과적으로 next함수를 통해 inorder traversal이 구현된다.
 
 ```c++
 
