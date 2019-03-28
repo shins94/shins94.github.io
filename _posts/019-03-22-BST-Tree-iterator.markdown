@@ -55,7 +55,59 @@ BST에서는 한 노드를 중심으로 좌측 자식에는 해당 노드 보다
 
 그러므로 항상 작은노드-->노드-->큰노드 식으로 iteration을 하면서 값을 리턴하게 구현한다.
 
+next 함수의 구현은 아래 내용과 같다. 
 
+current 노드의 값이 NULL이 아니면 current 노드를 Stack에 push하고 
+left노드 쪽으로 이동한다. 이것을 계속 반복하다가 current 노드가 NULL 이면 
+이 loop를 종료한다. 이렇게 되면 현재 stack top에는 출력되지 않은 
+가장 최소값의 노드(출력 되지 않은 가장 좌측의 노드)가 위치하게 된다.
+
+그리고 stack의 top값을 꺼내서 temp node에 저장한다. temp 노드의 right노드를 
+current에 저장한다. 그리고 temp->val을 return 하게 되면 next 함수는 항상
+출력되지 않은 BST내의 최소값을 return 하게 된다.
+
+
+```c++
+
+class BSTIterator {
+
+public:
+    
+    stack <TreeNode*> st;
+    TreeNode* current;
+    TreeNode* root;
+    BSTIterator(TreeNode* root) {
+        this->root = current = root;
+    }
+    
+    /** @return the next smallest number */
+    int next() {
+        
+        // 현재 노드에서 left 노드 
+        while(current) {
+            st.push(current);
+            current = current->left;
+        }
+        
+        TreeNode *temp = st.top();
+        st.pop();
+        
+        current = temp->right;
+        return temp->val;
+        
+    }
+    
+    /** @return whether we have a next smallest number */
+    bool hasNext() {
+        
+        if(current != NULL || st.size() != 0)
+            return true;
+        return false;
+        
+    }
+};
+
+```
 
 
 
