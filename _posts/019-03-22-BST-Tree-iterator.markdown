@@ -83,12 +83,14 @@ public:
     /** @return the next smallest number */
     int next() {
         
-        // 현재 노드에서 left 노드 
+        // current노드가 null이 될때까지 left 노드로
+        // 이동 한다.
         while(current) {
             st.push(current);
             current = current->left;
         }
         
+        //위 루프를 통해서 
         TreeNode *temp = st.top();
         st.pop();
         
