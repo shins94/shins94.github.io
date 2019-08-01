@@ -3,7 +3,7 @@ layout: post
 title: '초라기 습격자'
 subtitle: 백준 온라인 문제 풀이
 date: '2019-08-22 12:52:00-0000'
-background: /img/posts/hanuma.jpg
+background: /img/posts/hanuma.jpeg
 categories: algorithm
 published: true
 ---
