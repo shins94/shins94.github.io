@@ -18,7 +18,7 @@ DP 문제이다. 어렵다. 기본적인 알고리즘 어느정도 떠오르기�
 
 
 
-**![img](https://casterian.net/wp-content/uploads/2019/03/choragi1-768x707.png){: width="400" height="300"}**
+**![img](https://casterian.net/wp-content/uploads/2019/03/choragi1-768x707.png){: width="70%" height="70%"}**
 
 
 
