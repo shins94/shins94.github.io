@@ -7,6 +7,7 @@ background: /img/posts/hanuma.jpeg
 categories: algorithm
 published: true
 ---
+
 https://harunscorner.wordpress.com/2016/09/04/leetcode-guess-number-higher-or-lower-ii-solution/ 번역
 
 문제는 https://leetcode.com/problems/guess-number-higher-or-lower-ii/
@@ -21,6 +22,8 @@ n = 3일 경우를 예로해서 문제를 풀어보자. 3가지의 선택을 할
   이것을 정리 하면, 2를 선택했을때 최악의 경우 2&#36; 를 지불하고 3을 선택 했을때 최악의 경우 3&#36; 를 지불하는 것이다. 그래서 우리는 최악의 경우에 최소로 돈을 지불하는 2&#36;를 지불하는 2를 선택한다. (2를 선택했을때 2가답이면 0&#36;지불이고, 3을 선택을때 3이 답이면 3&#36; 지불이기 때문에 2$불 가지고 2를 선택하는것이 더 이득이 된다? )
 
 - 
+
+  
 
   
 
