@@ -14,9 +14,11 @@ https://harunscorner.wordpress.com/2016/09/04/leetcode-guess-number-higher-or-lo
 
 문제는 https://leetcode.com/problems/guess-number-higher-or-lower-ii/
 
+
 n = 3일 경우를 예로해서 문제를 풀어보자. 3가지의 선택을 할수 있다 1,2,3 중에 한개를 선택하는 것이다.
 
 1을 선택할 시에는 2개의 경우가 생긴다.
+
 
 - [Case X]: 1이 정답일 경우 0&#36;을 지불한다. 아니면
 
