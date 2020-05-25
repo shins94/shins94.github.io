@@ -19,7 +19,6 @@ paginate_path:     "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap 
 category_dir: category/
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
