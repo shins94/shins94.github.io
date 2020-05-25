@@ -3,7 +3,7 @@ layout: post
 title: 'LeetCode – Guess number higher or lower II'
 subtitle: LeetCode 문제 풀이
 date: '2020-05-24 06:40:00-0000'
-background: /img/posts/hanuma.jpeg
+background: /img/posts/03.jpg
 categories: algorithm
 published: true
 ---
@@ -70,10 +70,13 @@ public:
         if(dp[start][end] != MAX_VALUE)
             return dp[start][end];
         
-        
+        //설명과 같이 현재 상태에서 한개씩 선택하고 선택된것과 선택 안된
+        // 영역의 값을 더해서 그값중에 큰값 (최악의 경우)선택한다.
+        // 그리고 그 값들 중에 가장 적은 값을 dp에 지정하여 최적값을 구한다.
         for(int i = start; i <= end; i++) {
             
-            dp[start][end] = min(dp[start][end], max(i+solve(start,i-1),i+solve(i+1,end)));
+            dp[start][end] = 
+              min(dp[start][end], max(i+solve(start,i-1),i+solve(i+1,end)));
         }
 
         return dp[start][end];
