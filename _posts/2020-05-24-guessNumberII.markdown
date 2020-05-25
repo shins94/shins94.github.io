@@ -50,9 +50,59 @@ n = 3일 경우를 예로해서 문제를 풀어보자. 3가지의 선택을 할
 위의 3가지 경우 중에 가장 최소의 값이 답이 됨으로 n= 3일 경우에 답은 2가 된다.
 
 위의 경우를 재귀 + memoization으로 코딩하면 아래와 같다.
+ 
 
-  
-  
+
+
+```c++
+class Solution {
+public:
+    
+    
+    int **dp;
+    const int MAX_VALUE = 987654321;    
+    
+    int solve(int start, int end) {
+
+        if(start >= end)
+            return 0;
+    
+        if(dp[start][end] != MAX_VALUE)
+            return dp[start][end];
+        
+        
+        for(int i = start; i <= end; i++) {
+            
+            dp[start][end] = min(dp[start][end], max(i+solve(start,i-1),i+solve(i+1,end)));
+        }
+
+        return dp[start][end];
+        
+    }
+    
+    int getMoneyAmount(int n) {
+
+        dp = new int*[n+1];
+        
+        for(int i = 0; i < n+1; i++) {
+            dp[i] = new int[n+1];
+        }
+
+        for(int i = 0; i < n+1; i++) {
+        
+            for(int j = 0; j < n+1; j++) {
+                dp[i][j] = MAX_VALUE;            
+            }
+        }
+    
+        return solve(1,n);
+        
+    }
+};
+```
+
+
+
 
   
 
