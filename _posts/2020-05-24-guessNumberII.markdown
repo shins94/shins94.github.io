@@ -3,7 +3,7 @@ layout: post
 title: 'LeetCode – Guess number higher or lower II'
 subtitle: LeetCode 문제 풀이
 date: '2020-05-24 06:40:00-0000'
-background: /img/posts/03.jpg
+background: /img/posts/IMG_8766-EFFECTS.jpg
 categories: algorithm
 published: true
 ---
