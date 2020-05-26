@@ -10,7 +10,7 @@ published: true
 
 
 
-https://harunscorner.wordpress.com/2016/09/04/leetcode-guess-number-higher-or-lower-ii-solution/ 번역
+출처 :https://harunscorner.wordpress.com/2016/09/04/leetcode-guess-number-higher-or-lower-ii-solution/
 
 문제는 https://leetcode.com/problems/guess-number-higher-or-lower-ii/
 
